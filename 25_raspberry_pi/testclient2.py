@@ -7,7 +7,7 @@ import unittest
 
 FAILURE = ''
 
-host = '192.168.0.114'  # as both code is running on same pc
+host = '192.168.1.105'  # as both code is running on same pc
 port = 5000  # socket server port number
 client_socket = socket.socket()  # instantiate
 client_socket.connect((host, port))  # connect to the server
