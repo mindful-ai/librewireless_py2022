@@ -1,8 +1,12 @@
-import socket               
+#!/usr/bin/python           # This is client.py file
 
-s = socket.socket()        
-host = '192.168.0.114'# ip of raspberry pi 
-port = 12345               
-s.connect((host, port))
-print(s.recv(1024))
-s.close()
+import socket               # Import socket module
+
+s = socket.socket()         # Create a socket object
+#host = socket.gethostname() # Get local machine name
+#port = 12345                # Reserve a port for your service.
+s.connect(('127.0.0.1', 1000))
+
+
+print (s.recv(1024))
+s.close()                    # Close the socket when done
